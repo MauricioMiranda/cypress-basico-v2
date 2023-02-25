@@ -1,7 +1,5 @@
 /// <reference types="Cypress" />
 
-//npx cypress open - Comando para abrir o Cypress! Executar no terminal do Windows.
-
 describe('Central de Atendimento ao Cliente TAT', function() {
     const THREE_SECONDS_IN_MS = 3000
 
@@ -239,7 +237,7 @@ describe('Central de Atendimento ao Cliente TAT', function() {
           expect(body).to.include('CAC TAT')
         })
     })
-    it.only('encontrar o gato escondido', function(){
+    it('encontrar o gato escondido', function(){
       cy.get('#cat')
         .invoke('show')
         .should('be.visible')
